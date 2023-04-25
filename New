@@ -53,6 +53,7 @@ server=/*.aliyun.com/223.5.5.5
 
 # - Filter_local 标签 - 本地分流 开始 start -
 [filter_local]
+# 本地分流
 host, ad.12306.cn, DIRECT
 host, sdkapp.uve.weibo.com, DIRECT
 host, amdc.m.taobao.com, REJECT
