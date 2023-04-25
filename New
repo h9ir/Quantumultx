@@ -1,6 +1,7 @@
 #Quantumultx
 #自用配置内容来自各位Github大佬。
 
+# - General 标签 - 通用配置 开始 start -
 [general]
 # 资源解析器
 resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
@@ -9,7 +10,61 @@ geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubuserc
 # 网络测试
 network_check_url=http://apple.com
 server_check_url=http://captive.apple.com/
-#网络超时检测(ms)
+# 网络超时检测(毫秒)
 server_check_timeout=3000
-#路由排除
+# 路由排除
 excluded_routes= 10.0.0.0/8, 17.0.0.0/8, 24.105.30.129/32, 100.64.0.0/10, 172.16.0.0/12, 182.162.132.1/32, 185.60.112.157/32, 185.60.112.158/32,192.168.0.0/16,239.255.255.250/32
+# UDP白名单
+udp_whitelist=53,123,81-442,443,444-65535
+# DNS排除列表
+dns_exclusion_list=*.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id6.me, *.pingan.com.cn, *.qq.com, qq.com, *.cmbchina.com, *.localnetwork.uop
+# - General 标签 - 通用配置 结束 end -
+
+# - DNS 标签 开始 start -
+[dns]
+# 禁用IPv6
+no-ipv6
+# 禁用系统 DNS
+no-system
+# 指定DNS 
+server=223.5.5.5
+server=119.29.29.29
+# 特定域名指定DNS解析
+server=/*icloud.com/119.29.29.29
+server=/*icloud.com.cn/119.29.29.29
+server=/*.jd.com/1192.29.29.29
+server=/*tencent.com/119.29.29.29
+server=/*weixin.com/119.29.29.29
+server=/*.taobao.com/223.5.5.5
+server=/*.tmall.com/223.5.5.5
+server=/*.alipay.com/223.5.5.5
+server=/*.alicdn.com/223.5.5.5
+server=/*.aliyun.com/223.5.5.5
+# - DNS 标签  结束 end  -
+
+# - Policy 标签 - 策略组 开始 start -
+# - Policy 标签 - 策略组 结束 end -
+
+# - Server_local 标签 - 本地节点 开始 start -
+# - Server_local 标签 - 本地节点 结束 end -
+
+# - Server_remote 标签 - 远程节点 开始 start -
+# - Server_remote 标签 - 远程节点 结束 end -
+
+# - Filter_local 标签 - 本地分流 开始 start -
+# 本地分流
+host, ad.12306.cn, DIRECT
+host, sdkapp.uve.weibo.com, DIRECT
+host, amdc.m.taobao.com, REJECT
+host-suffix, kuwo.cn, DIRECT
+ip-cidr, 192.168.0.0/16, DIRECT
+ip-cidr, 10.0.0.0/8, DIRECT
+ip-cidr, 172.16.0.0/12, DIRECT
+ip-cidr, 127.0.0.0/8, DIRECT
+ip-cidr, 100.64.0.0/10, DIRECT
+ip-cidr, 224.0.0.0/4, DIRECT
+ip6-cidr, fe80::/10, DIRECT
+host-suffix, local, DIRECT
+geoip, cn, DIRECT
+final, PROXY
+# - Filter_local 标签 - 本地分流 结束 end -
