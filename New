@@ -100,4 +100,5 @@ event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/
 # - Http_backend 标签 - 开始 start -
 
 # - Mitm 标签 开始 start  -
+hostname = -*api.smzdm.com, -weather-data.apple.com, -*amemv.com, -*snssdk.com, -www.google.com, res.cc.cmbimg.com,
 # - Mitm 标签 结束 end  -
