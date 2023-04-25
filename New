@@ -53,6 +53,7 @@ server=/*.aliyun.com/223.5.5.5
 
 # - Filter_local 标签 - 本地分流 开始 start -
 # 本地分流
+[filter_local]
 host, ad.12306.cn, DIRECT
 host, sdkapp.uve.weibo.com, DIRECT
 host, amdc.m.taobao.com, REJECT
@@ -68,3 +69,35 @@ host-suffix, local, DIRECT
 geoip, cn, DIRECT
 final, PROXY
 # - Filter_local 标签 - 本地分流 结束 end -
+
+# - Filter_remote 标签 - 远程分流 开始 start -
+[filter_remote]
+# 去广告分流 默认reject
+https://anti-ad.net/surge2.txt, tag=Anti-ad, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list, tag=blackmatrix7, force-policy=reject, update-interval=172800, opt-parser=false, enabled=true
+# - Filter_remote 标签 - 远程分流 结束 end -
+
+# - Rewrite_local 标签 - 本地重写 开始 start -
+# - Rewrite_local 标签 - 本地重写 结束 end -
+
+# - Rewrite_remote 标签 - 远程重写 开始 start -
+[rewrite_remote]
+# 去广告重写
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.conf, tag=blackmatrix7, update-interval=172800, opt-parser=false, enabled=true
+# - Rewrite_remote 标签 - 远程重写 结束 end -
+
+# - Task_local 标签 - 自动任务 开始 start -
+[task_local]
+# 节点位置查询
+event-interaction https://api.343.re/freedom/rule/quanx/script/ipinfo.js, tag=节点位置查询, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png, enabled=true
+# 节点网速查询
+event-interaction https://raw.githubusercontent.com/getsomecat/Qx/main/Net_Speed.js, tag=节点网速查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png, enabled=true
+# 流媒体解锁查询
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁查询, img-url=checkmark.seal.system, enabled=true
+# - Task_local 标签 - 自动任务 结束 end -
+
+# - Http_backend 标签 - 开始 start -
+# - Http_backend 标签 - 开始 start -
+
+# - Mitm 标签 开始 start  -
+# - Mitm 标签 结束 end  -
