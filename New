@@ -7,7 +7,7 @@
 resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
 # 中文带国旗&IP
 geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/GeoLocationChecker/QuantumultX/IP-API.js
-# 网络测试
+# 网络连接测试
 network_check_url=http://apple.com
 server_check_url=http://captive.apple.com/
 # 网络超时检测(毫秒)
@@ -52,7 +52,6 @@ server=/*.aliyun.com/223.5.5.5
 # - Server_remote 标签 - 远程节点 结束 end -
 
 # - Filter_local 标签 - 本地分流 开始 start -
-# 本地分流
 [filter_local]
 host, ad.12306.cn, DIRECT
 host, sdkapp.uve.weibo.com, DIRECT
