@@ -13,7 +13,7 @@ server_check_url=http://captive.apple.com/
 # 网络超时检测(毫秒)
 server_check_timeout=3000
 # 路由排除
-excluded_routes=192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8
+excluded_routes=192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8, 239.255.255.250/32
 # 域名拦截模式
 # 可选参数 loopback，no-error-no-answer，nxdomain
 dns_reject_domain_behavior = loopback
