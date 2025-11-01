@@ -4,7 +4,7 @@
 #############################################
 
 # General 标签：模块内为一些通用的设置参数项
-# 开始 start
+# > General 标签 - 通用配置 开始 start -
 [general]
 # > Quantumult X 会对 server_check_url 指定的网址进行相应测试，以确认节点的可用性
 # > 你同样可以在 server_local/server_remote 中，为节点、订阅单独指定server_check_url参数
@@ -23,3 +23,88 @@ dns_exclusion_list=*.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id6.
 resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
 # > 下列表中的内容将不经过QuantumultX的处理，设置后建议重启设备
 excluded_routes=239.255.255.250/32, 192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8, 24.105.30.129/32, 185.60.112.157/32, 185.60.112.158/32, 182.162.132.1/32, 17.0.0.0/8
+# > udp服务策略 仅支持末端策略
+fallback_udp_policy=direct
+# > UDP 白名单
+udp_whitelist=53, 123, 81-442, 443, 444-65535
+# > UDP Drop名单
+udp_drop_list=443
+# > General 标签 - 通用配置 结束 end -
+
+# DNS 标签：模块内为一些通用的设置参数项
+# - DNS 标签 开始 start -
+[dns]
+# > 禁用系统 DNS 及 ipv6
+no-system
+no-ipv6
+# > DNS服务器
+server=223.5.5.5
+server=119.29.29.29
+server=8.8.8.8
+# > 特定域名指定DNS解析
+server=/*icloud.com/119.29.29.29
+server=/*icloud.com.cn/119.29.29.29
+server=/*.jd.com/119.29.29.29
+server=/*tencent.com/119.29.29.29
+server=/*weixin.com/119.29.29.29
+server=/*.taobao.com/223.5.5.5
+server=/*.tmall.com/223.5.5.5
+server=/*.alipay.com/223.5.5.5
+server=/*.alicdn.com/223.5.5.5
+server=/*.aliyun.com/223.5.5.5
+# - DNS 标签  结束 end  -
+
+# > 策略组
+# - Policy 标签 - 策略组 开始 start -
+[policy]
+# - Policy 标签 - 策略组 结束 end -
+
+# > 本地服务器
+# - Server_local 标签 - 本地节点 开始 start -
+[server_local]
+# - Server_local 标签 - 本地节点 结束 end -
+
+# > 远程订阅
+# - Server_remote 标签 - 远程节点 开始 start -
+[server_remote]
+# - Server_remote 标签 - 远程节点 结束 end -
+
+# > 本地分流规则 对于完全相同的某条规则，本地的将优先于远程生效
+# - Filter_local 标签 - 本地分流 开始 start -
+[filter_local]
+host-suffix, local, direct
+host, ad.12306.cn, direct
+host, sdkapp.uve.weibo.com, direct
+host-keyword, github, proxy
+geoip, cn, direct
+final, PROXY
+ip-cidr, 182.254.116.0/24, DIRECT
+ip-cidr, 192.168.0.0/16, DIRECT
+ip-cidr, 10.0.0.0/8, DIRECT
+ip-cidr, 172.16.0.0/12, DIRECT
+ip-cidr, 127.0.0.0/8, DIRECT
+ip-cidr, 100.64.0.0/10, DIRECT
+ip-cidr, 224.0.0.0/4, DIRECT
+ip-cidr, 224.0.0.0/24, DIRECT
+ip6-cidr, fe80::/10, DIRECT
+# - Filter_local 标签 - 本地分流 结束 end -
+
+# > 远程订阅分流规则
+# - Filter_remote 标签 - 远程分流 开始 start -
+[filter_remote]
+# - Filter_remote 标签 - 远程分流 结束 end -
+
+# > 本地重写
+# - Rewrite_local 标签 - 本地重写 开始 start -
+[Rewrite_local]
+# - Rewrite_local 标签 - 本地重写 结束 end -
+
+# > 远程订阅重写
+# - Rewrite_remote 标签 - 远程重写 开始 start -
+[rewrite_remote]
+# - Rewrite_remote 标签 - 远程重写 结束 end -
+
+# > 自动任务
+# - Task_local 标签 - 自动任务 开始 start -
+[task_local]
+# - Task_local 标签 - 自动任务 结束 end -
