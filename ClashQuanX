@@ -109,8 +109,8 @@ ip6-cidr, fe80::/10, DIRECT
 [task_local]
 # 节点信息查询
 event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/server-info-plus.js, tag=节点信息查询, img-url=https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/cartoon/Cute/3icon.png, enabled=true
-# 节点速度查询
-event-interaction https://raw.githubusercontent.com/getsomecat/Qx/main/Net_Speed.js, tag=节点速度查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png, enabled=true
+# 节点速度测试
+event-interaction https://raw.githubusercontent.com/getsomecat/Qx/main/Net_Speed.js, tag=节点速度测试, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png, enabled=true
 # UI交互检测
 event-interaction https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/NodeLinkCheck/Script/NodeLinkCheck.js, tag=Env代理链路检测, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Stack.png, enabled=true
 event-interaction https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/server_info.js, tag=节点详情查询, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ipInfo.png, enabled=true
@@ -126,3 +126,8 @@ event-interaction https://raw.githubusercontent.com/fmz200/wool_scripts/main/Qua
 [mitm]
 hostname = -www.google.com
 # - Mitm 标签 结束 end  -
+
+# > 证书
+skip_validating_cert = true
+passphrase = 
+p12 = 
