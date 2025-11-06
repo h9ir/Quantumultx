@@ -19,6 +19,9 @@ host, ad.12306.cn, direct
 host,log.mmstat.com, direct
 host,sycm.mmstat.com, direct
 
+# >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
+host-suffix, optimus-ads.amap.com, direct
+
 # >>>>>>>>>>>>>>> ✅ P ✅ <<<<<<<<<<<<<<
 # > 苹果推送服务
 host-keyword, push.apple.com, direct
