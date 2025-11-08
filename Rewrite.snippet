@@ -79,7 +79,7 @@
 # > 哔哩哔哩
 # hostname = -broadcast.chat.bilibili.com, -cm.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net, app.bilibili.com, api.live.bilibili.com, *.bilibili.com, *.bili*.*, *.bilibili.*, grpc.biliapi.net, *biliapi.net
 # 去除开屏广告
-^https?://app\.bilibili\.com/x/v2/splash url response-body "splash":\{"max_time":\d+,"pull_interval":\d+,"list":\[.*?\]\} response-body "splash":{"max_time":0,"pull_interval":86400,"list":[]}
+^https?://app\.bilibili\.com/x/v2/splash url response-body "splash":\{"max_time":\d+.*?\} response-body "splash":{"max_time":0,"pull_interval":86400,"list":[]}
 # 屏蔽广告请求接口
 ^https?://api\.bilibili\.com/x/vas/ad\? url reject
 ^https?://api\.bilibili\.com/ogv/playurl/ad url reject
@@ -87,21 +87,20 @@
 ^https?://api\.bilibili\.com/x/v2/ad url reject
 ^https?://api\.bilibili\.com/pgc/season/ads/conf url reject
 # 屏蔽商业化组件
-^https?://api\.bilibili\.com/x/v2/account/mall/suit/current url reject-dict
-^https?://api\.bilibili\.com/x/v2/account/myinfo\? url header-replace "Cache-Control" "no-cache"
+^https?://api\.bilibili\.com/x/v2/account/mall/suit/current url reject
 # 屏蔽游戏中心广告
-^https?://api\.biligame\.com/game/feed/recommend url reject-dict
+^https?://api\.biligame\.com/game/feed/recommend url reject
 # 屏蔽搜索页广告
-^https?://app\.bilibili\.com/x/v2/search/defaultword url reject-dict
-^https?://app\.bilibili\.com/x/v2/search/square url reject-dict
+^https?://app\.bilibili\.com/x/v2/search/defaultword url reject
+^https?://app\.bilibili\.com/x/v2/search/square url reject
 # 屏蔽直播广告
 ^https?://api\.live\.bilibili\.com/xlive/web-room/v1/index/getInfoByRoom url response-body "activity_banner":\[.*?\] response-body "activity_banner":[]
 ^https?://api\.live\.bilibili\.com/room/v1/Room/playUrl url response-body "view_callback":".*?" response-body "view_callback":""
 # 屏蔽漫画广告
-^https?://manga\.bilibili\.com/twirp/.*\.GetIndexRecommend url reject-dict
-^https?://manga\.bilibili\.com/twirp/.*\.GetClassPage url reject-dict
+^https?://manga\.bilibili\.com/twirp/.*\.GetIndexRecommend url reject
+^https?://manga\.bilibili\.com/twirp/.*\.GetClassPage url reject
 # 屏蔽动态页广告
-^https?://api\.vc\.bilibili\.com/dynamic_svr/v1/dynamic_svr/dynamic_new url response-body "ad":\{"card_type":"ad".*?\} response-body ""
+^https?://api\.vc\.bilibili\.com/dynamic_svr/v1/dynamic_svr/dynamic_new url response-body "card_type":"ad".*?,"ad_info":\{.*?\} response-body ""
 # 屏蔽推荐流中的广告卡片
 ^https?://api\.bilibili\.com/x/v2/feed/index url response-body "card_type":"cm" response-body "card_type":"removed"
 ^https?://api\.bilibili\.com/x/v2/feed/index url response-body "is_ad":true response-body "is_ad":false
@@ -110,7 +109,7 @@
 ^https?://api\.bilibili\.com/x/player/v2 url response-body "sponsor":\{.*?\} response-body "sponsor":{}
 ^https?://api\.bilibili\.com/x/player/v2 url response-body "player_mid_roll":\{.*?\} response-body "player_mid_roll":{}
 # 屏蔽商业化弹窗
-^https?://api\.bilibili\.com/x/v2/account/mine/ipad/popups url reject-dict
+^https?://api\.bilibili\.com/x/v2/account/mine/ipad/popups url reject
 # 屏蔽会员购推广
 ^https?://api\.bilibili\.com/x/v2/mall/home url response-body "recommend":\[.*?\] response-body "recommend":[]
 # > 百度地图
