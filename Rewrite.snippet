@@ -327,8 +327,6 @@
 ^https?:\/\/app\.umetrip\.com\/api\/v\d+\/(startup|splash)\/.* url reject
 # 拦截开屏图片资源
 ^https?:\/\/img\.umetrip\.com\/(upload|images)\/.*(splash|start|launch|guide).*\.(jpg|png|gif|webp) url reject
-# 处理配置信息
-^https?:\/\/app\.umetrip\.com\/api\/(config\/getConfig|common\/getCommonConfig) url script-response-body umetrip-splash.js
 # 兜底规则 - 拦截包含广告参数的任何启动相关请求
 ^https?:\/\/app\.umetrip\.com\/.*(splash|start|launch).*((ad)|(ads)|(advert)) url reject
 
