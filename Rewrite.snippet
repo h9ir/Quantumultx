@@ -78,8 +78,6 @@
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
 # > 哔哩哔哩
 # hostname = *.bilibili.com, *.bilivideo.com, *.hdslb.com, *.biligame.com, *.biliapi.net, *.bstarstatic.com
-[rewrite_local]
-# ======= 哔哩哔哩去广告配置 =======
 # 开屏广告去除
 ^https?://app\.bilibili\.com/x/v2/splash\? url response-body "splash":\{"max_time":\d+.*?\} response-body "splash":{"max_time":0,"pull_interval":86400,"list":[]}
 # 推荐流广告去除
