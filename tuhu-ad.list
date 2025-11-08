@@ -1,0 +1,13 @@
+#############################################
+# Quantumelt X 分流修正
+# 自用内容来自各位Github大佬。
+#############################################
+
+# 途虎养车广告屏蔽
+^https?:\/\/ad\.tuhu\.cn url reject
+^https?:\/\/api\.tuhu\.cn\/v\d+\/ad url reject
+^https?:\/\/api\.tuhu\.cn\/v\d+\/banner\?position=ad url reject
+^https?:\/\/m\.tuhu\.cn\/ad url reject
+^https?:\/\/img\.tuhu\.cn\/advertising url reject
+^https?:\/\/tracking\.tuhu\.cn url reject
+^https?:\/\/log\.tuhu\.cn url reject
