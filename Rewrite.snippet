@@ -466,11 +466,13 @@
 ^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig url reject
 # > 途虎养车
 # hostname = api.tuhu.cn, *.tuhu.cn
-# 途虎开屏广告屏蔽
-^https?:\/\/api\.tuhu\.cn\/.+\/(splash|ad|advert)\/ url reject
-^https?:\/\/ad\.tuhu\.cn\/ url reject
-^https?:\/\/.+\/tuhu\/.+\/ad\/ url reject
-^https?:\/\/.+\/tuhu\/.+\/splash\/ url reject
+# 途虎开屏广告终极屏蔽
+^https?:\/\/api\.tuhu\.cn\/.+\/(splash|ad|advert|startpage|launch|init) url reject
+^https?:\/\/ad\.tuhu\.cn\/.* url reject
+^https?:\/\/.+\/tuhu.+\/(ad|advert|splash|startup|launch).* url reject
+^https?:\/\/.+\/tuhu.+\/v\d+\/(splash|ad) url reject
+^https?:\/\/.+\/tuhu.+\/config\/(splash|ad) url reject
+^https?:\/\/.+\/tuhu.+\/common\/(ad|advert) url reject
 # 弹窗广告
 ^https?:\/\/api\.tuhu\.cn\/.+\/(Common|Ad)\/GetPopupConfig url reject
 ^https?:\/\/api\.tuhu\.cn\/.+\/(Common|Ad)\/GetPopupAd url reject
