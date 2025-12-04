@@ -1,3 +1,8 @@
+#############################################
+#!Name=AI分流合集
+#!Date=2025-12-05
+#############################################
+
 # ---------- Gemini / Google AI ----------
 HOST,ai.google.dev,AI
 HOST,alkalimakersuite-pa.clients6.google.com,AI
