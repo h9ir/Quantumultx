@@ -1,28 +1,28 @@
 # ---------- Gemini / Google AI ----------
-DOMAIN-SUFFIX=ai.google.dev,AI
-DOMAIN-SUFFIX=google.ai,AI
-DOMAIN-SUFFIX=gemini.google.com,AI
-DOMAIN-SUFFIX=bard.google.com,AI
-DOMAIN-SUFFIX=deepmind.com,AI
-DOMAIN-SUFFIX=aiplatform.googleapis.com,AI
-DOMAIN-SUFFIX=ai.googleusercontent.com,AI
-DOMAIN-KEYWORD=gemini,AI
+DOMAIN-SUFFIX,ai.google.dev,AI
+DOMAIN-SUFFIX,google.ai,AI
+DOMAIN-SUFFIX,gemini.google.com,AI
+DOMAIN-SUFFIX,bard.google.com,AI
+DOMAIN-SUFFIX,deepmind.com,AI
+DOMAIN-SUFFIX,aiplatform.googleapis.com,AI
+DOMAIN-SUFFIX,ai.googleusercontent.com,AI
+DOMAIN-KEYWORD,gemini,AI
 
 # ---------- ChatGPT / OpenAI ----------
-DOMAIN-SUFFIX=openai.com,AI
-DOMAIN-SUFFIX=auth0.openai.com,AI
-DOMAIN-SUFFIX=oaiusercontent.com,AI
-DOMAIN-SUFFIX=openaiapi-site.azureedge.net,AI
-DOMAIN-SUFFIX=cdn.openai.com,AI
-DOMAIN-SUFFIX=chat.openai.com,AI
-DOMAIN-SUFFIX=api.openai.com,AI
-DOMAIN-KEYWORD=openai,AI
-DOMAIN-KEYWORD=chatgpt,AI
+DOMAIN-SUFFIX,openai.com,AI
+DOMAIN-SUFFIX,auth0.openai.com,AI
+DOMAIN-SUFFIX,oaiusercontent.com,AI
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net,AI
+DOMAIN-SUFFIX,cdn.openai.com,AI
+DOMAIN-SUFFIX,chat.openai.com,AI
+DOMAIN-SUFFIX,api.openai.com,AI
+DOMAIN-KEYWORD,openai,AI
+DOMAIN-KEYWORD,chatgpt,AI
 
 # ---------- Grok / xAI ----------
-DOMAIN-SUFFIX=x.ai,AI
-DOMAIN-SUFFIX=grok.x.ai,AI
-DOMAIN-SUFFIX=chat.x.ai,AI
-DOMAIN-SUFFIX=api.x.ai,AI
-DOMAIN-KEYWORD=xai,AI
-DOMAIN-KEYWORD=grok,AI
+DOMAIN-SUFFIX,x.ai,AI
+DOMAIN-SUFFIX,grok.x.ai,AI
+DOMAIN-SUFFIX,chat.x.ai,AI
+DOMAIN-SUFFIX,api.x.ai,AI
+DOMAIN-KEYWORD,xai,AI
+DOMAIN-KEYWORD,grok,AI
