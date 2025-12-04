@@ -60,4 +60,4 @@ HOST-SUFFIX,x.ai,AI
 HOST-SUFFIX,grok.com,AI
 HOST-SUFFIX,featureassets.org,AI
 HOST-SUFFIX,xai.chronosphere.io,AI
-IP-CIDR,17.253.4.125,AI
+IP-CIDR,17.253.4.125/32,AI
