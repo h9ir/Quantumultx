@@ -232,10 +232,14 @@
 # ---- 资讯/活动弹窗推送 ----
 ^https?:\/\/sns.*\.amap\.com\/ws\/msgbox\/pull url reject-dict
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/business url reject-dict
-# ---- 素材广告资源 ----
-^https?:\/\/oss\.amap\.com\/ads\/ material url reject-dict
-# ---- 广告通用兜底 不干扰导航核心接口 ----
-^https?:\/\/m5\.amap\.com\/ws\/.*ad url reject-dict
+# 素材广告资源
+^https?:\/\/oss\.amap\.com\/ads\/ url reject-dict
+# 通用兜底广告阻断（可留）
+^https?:\/\/m5\.amap\.com\/ws\/.*(ad|ads|advert) url reject-dict
+# —— 可选增强（更狠，可开关）——
+^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ url reject-dict
+^https?:\/\/m5\.amap\.com\/ws\/faas\/ url reject-dict
+^https?:\/\/sns.*\.amap\.com\/ws\/.* url reject-dict
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
