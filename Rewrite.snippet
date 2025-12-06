@@ -216,35 +216,26 @@
 ^https?:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/advertising\/202\d{5}\/.*.(png|jpg) url reject-200
 ^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d{25}\.(png|jpg) url reject-img
 # > 高德地图
-# ===========================
-# 高德地图 去广告配置（无功能损伤）
-# ===========================
 # hostname = amap.com, *.amap.com, m5.amap.com, sns*.amap.com, oss.amap.com
-# ---- 开屏广告去除 ----
-^https?:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/ad\/.* url reject-dict
-^https?:\/\/m5\.amap\.com\/ws\/opt\/ad.* url reject-dict
-^https?:\/\/m5\.amap\.com\/ws\/shield\/search\/ads.* url reject-dict
-# ---- 去除横幅/信息流广告 ----
-^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/.*ad.* url reject-dict
-^https?:\/\/m5\.amap\.com\/ws\/promotion\/.* url reject-dict
-^https?:\/\/sns.*\.amap\.com\/ws\/msgbox\/pull.* url reject-dict
-# ---- 导航过程广告(路线推荐广告位) ----
-^https?:\/\/m5\.amap\.com\/ws\/activity\/promotion.* url reject-dict
-^https?:\/\/m5\.amap\.com\/ws\/trip\/scenedrive\/.*ad.* url reject-dict
-# ---- 卡片、活动弹窗、会员推广 ----
-^https?:\/\/m5\.amap\.com\/ws\/faas\/athena\/ads.* url reject-dict
-^https?:\/\/m5\.amap\.com\/ws\/shield\/widgets\/.*ad.* url reject-dict
-^https?:\/\/m5\.amap\.com\/ws\/valueadded\/business\/.* url reject-dict
-# ---- 首页内容流推广 ----
-^https?:\/\/m5\.amap\.com\/ws\/feedback\/promotion.* url reject-dict
-^https?:\/\/m5\.amap\.com\/ws\/peach\/faas\/.*ad.* url reject-dict
-# ---- 加强版广告拦截(可留必要服务) ----
-^https?:\/\/oss\.amap\.com\/ads\/material.* url reject-dict
-^https?:\/\/.*amap\.com\/ws\/.*ad.* url reject-dict
-# 隐藏周边店铺推广/活动入口
-^https?:\/\/m5\.amap\.com\/ws\/shield\/search\/hotword.* url reject-dict
-# 去活动弹窗推送
-^https?:\/\/sns.*\.amap\.com\/ws\/msgbox\/.* url reject-dict
+# ---- 开屏广告 ----
+^https?:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/ad\/ url reject-dict
+^https?:\/\/m5\.amap\.com\/ws\/opt\/ad url reject-dict
+^https?:\/\/m5\.amap\.com\/ws\/shield\/search\/ads url reject-dict
+# ---- 首页横幅/卡片广告 ----
+^https?:\/\/m5\.amap\.com\/ws\/promotion\/ url reject-dict
+^https?:\/\/m5\.amap\.com\/ws\/faas\/athena\/ads url reject-dict
+^https?:\/\/m5\.amap\.com\/ws\/peach\/faas\/.*ad url reject-dict
+^https?:\/\/m5\.amap\.com\/ws\/trip\/scenedrive\/.*ad url reject-dict
+# ---- 导航推荐广告 ----
+^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/.*ad url reject-dict
+^https?:\/\/m5\.amap\.com\/ws\/activity\/promotion url reject-dict
+# ---- 资讯/活动弹窗推送 ----
+^https?:\/\/sns.*\.amap\.com\/ws\/msgbox\/pull url reject-dict
+^https?:\/\/m5\.amap\.com\/ws\/valueadded\/business url reject-dict
+# ---- 素材广告资源 ----
+^https?:\/\/oss\.amap\.com\/ads\/ material url reject-dict
+# ---- 广告通用兜底 不干扰导航核心接口 ----
+^https?:\/\/m5\.amap\.com\/ws\/.*ad url reject-dict
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
